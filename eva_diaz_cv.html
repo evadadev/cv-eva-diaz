@@ -1,0 +1,768 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.cdnfonts.com/css/source-serif-pro" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>CV Manfred Export</title>
+    <style>
+      /* css vars */
+      :root {
+        /* spacing */
+        --spacing_base: 4px;
+        --spacing_2: calc(var(--spacing_base) / 2);
+        --spacing_8: calc(var(--spacing_base) * 2);
+        --spacing_12: calc(var(--spacing_base) * 3);
+        --spacing_16: calc(var(--spacing_base) * 4);
+        --spacing_24: calc(var(--spacing_base) * 6);
+        --spacing_32: calc(var(--spacing_base) * 8);
+        --spacing_48: calc(var(--spacing_base) * 12);
+        --spacing_64: calc(var(--spacing_base) * 16);
+        /* colors */
+        --manfred-dark: #353241;
+        --manfred-blue: #1e0b6e;
+        --manfred-purple: #7d64d6;
+        --manfred-green-blue: #3ba0b7;
+        --manfred-green-light: #5ecabf;
+        --manfred-grey: #837e93;
+        --manfred-light: #f8f7f3;
+        --manfred-light-green: #78d549;
+        --manfred-cream: #ebe8df;
+        --manfred-gradient: linear-gradient(90deg, #1e0b6e 0%, #3ba0b7 84.74%, #5ecabf 95.24%);
+      }
+
+      /* General styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+        color: var(--manfred-dark);
+        background-color: var(--manfred-light);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .root {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing_32);
+        min-height: 100vh;
+        max-width: 1100px;
+        padding: var(--spacing_64) var(--spacing_32);
+      }
+
+      h1 {
+        display: flex;
+        flex-direction: column;
+        min-width: min-content;
+        text-transform: capitalize;
+        font-family: 'Source Serif Pro', sans-serif;
+        font-size: 75px;
+        font-weight: 900;
+        letter-spacing: 1.23px;
+        background: var(--manfred-gradient);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .gradient__background {
+        display: flex;
+        flex-grow: 1;
+        background: var(--manfred-gradient);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+      }
+      @media (min-width: 728px) {
+        h1 {
+          font-size: 82px;
+          font-weight: 900;
+        }
+      }
+
+      .surname {
+        font-size: 48px;
+        -webkit-text-fill-color: var(--manfred-blue);
+        letter-spacing: -0.72px;
+        text-transform: capitalize;
+      }
+
+      h2 {
+        font-family: 'Source Serif Pro', sans-serif;
+        font-size: 28px;
+        font-weight: 900;
+        letter-spacing: 1.4px;
+      }
+
+      h3 {
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+      }
+
+      h4 {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.9px;
+      }
+
+      a {
+        color: var(--manfred-green-blue);
+        text-decoration: none;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.75px;
+      }
+
+      .technologie__icon--gray-scale {
+        max-width: 35px;
+        filter: grayscale(100%);
+      }
+
+      /* header styles */
+      header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: flex-start;
+        gap: var(--spacing_24);
+        width: 100%;
+      }
+
+      header > img {
+        align-self: center;
+        border-radius: 225px;
+        min-width: 225px;
+        min-height: 225px;
+        max-width: 350px;
+        max-height: 350px;
+        object-fit: cover;
+        background: var(--manfred-gradient);
+      }
+
+      .header__content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        gap: var(--spacing_24);
+      }
+
+      .header__content__name {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: var(--spacing_16) 0px;
+      }
+
+      .header__content__name > * {
+        padding-left: var(--spacing_8);
+      }
+
+      .job-title {
+        color: var(--manfred-dark);
+        font-family: 'Source Serif Pro', sans-serif;
+        font-size: 24px;
+        font-style: italic;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+      }
+
+      .header__content__address {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing_8);
+        padding-left: var(--spacing_8);
+      }
+
+      .header__content__address > p {
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: -0.18px;
+      }
+
+      .header__content__links {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing_32);
+        padding-left: var(--spacing_8);
+      }
+
+      @media (min-width: 728px) {
+        .header__content__address > p {
+          font-size: 16px;
+        }
+        .job-title {
+          font-size: 32px;
+        }
+
+        header {
+          justify-content: flex-start;
+          align-items: center;
+          flex-direction: row;
+          gap: var(--spacing_48);
+        }
+
+        .header__content {
+          justify-content: space-between;
+        }
+
+        .header__content__name {
+          padding: 0px;
+        }
+
+      }
+
+      /* main section styles */
+      main {
+        display: flex;
+        padding: var(--spacing_32) 0px;
+        flex-direction: column;
+        gap: var(--spacing_64);
+      }
+
+      .main__section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing_32);
+      }
+
+      .main__section > p {
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.75px;
+      }
+
+      .main__section__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: var(--spacing_16);
+        width: 100%;
+        padding-bottom: var(--spacing_32);
+        border-bottom: 1px solid rgba(94, 202, 191, 0.3);
+      }
+
+      .main__section__header {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing_16);
+      }
+
+      .about-me__section {
+        gap: var(--spacing_16);
+      }
+
+      .ul__languages {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing_16);
+        width: 100%;
+      }
+
+      .li__languages {
+        display: flex;
+        gap: var(--spacing_16);
+        padding: var(--spacing_16);
+        justify-content: space-between;
+        align-items: center;
+        border-radius: var(--spacing_8);
+        background: #fff;
+        box-shadow: 0px 1px 2px 0px rgba(11, 15, 6, 0.25);
+        width: 100%;
+        min-width: 300px;
+      }
+
+      @media (min-width: 728px) {
+        .ul__languages {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        .li__languages {
+          width: 300px;
+        }
+      }
+
+      .main__lang__level {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: var(--spacing_base);
+        color: var(--manfred-grey);
+        text-transform: uppercase;
+        font-family: Montserrat;
+        font-size: 10px;
+        font-weight: 500;
+        font-variant: all-small-caps;
+        letter-spacing: 0.5px;
+      }
+
+      .ul__technologies {
+        display: flex;
+        gap: var(--spacing_16);
+        flex-wrap: wrap;
+      }
+
+      @media (min-width: 728px) {
+        .ul__technologies {
+          display: inline-flex;
+          flex-direction: row;
+          align-items: flex-start;
+          align-content: flex-start;
+          gap: var(--spacing_16);
+          flex-wrap: wrap;
+        }
+      }
+
+      .li__technologies {
+        font-weight: 600;
+        letter-spacing: 0.75px;
+        display: flex;
+        padding: var(--spacing_8) var(--spacing_12);
+        align-items: center;
+        gap: var(--spacing_8);
+        border-radius: var(--spacing_8);
+        background: #fff;
+        box-shadow: 0px 1px 2px 0px rgba(11, 15, 6, 0.25);
+      }
+
+      .main__section__skills__ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing_16);
+        width: 100%;
+      }
+
+      .main__section__skills__li {
+        width: 100%;
+        padding: var(--spacing_16);
+        border-radius: var(--spacing_8);
+        background: #fff;
+        box-shadow: 0px 1px 2px 0px rgba(11, 15, 6, 0.25);
+        font-weight: 600;
+        letter-spacing: 0.75px;
+        list-style-position: inside;
+      }
+
+      .section__content__date {
+        display: flex;
+        height: 18px;
+        align-items: flex-start;
+        gap: var(--spacing_16);
+        padding-bottom: var(--spacing_16);
+      }
+
+      .main__section__data {
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.75px;
+      }
+
+      .main__section__data > ul {
+        padding-left: var(--spacing_16);
+      }
+
+      .tech__tools__heading {
+        font-family: 'Source Serif Pro', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0.9px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="root">
+
+      <header>
+
+          <img src="https://media-asgard.s3.eu-west-1.amazonaws.com/24/04/10/4fc10964-6e2d-4a3f-a965-e3eb3ca6a183_linkedin-photo-60170.linkedin-photo-60170" />
+
+        <section class="header__content">
+
+
+
+            <div class="header__content__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="10" viewBox="0 0 64 10" fill="none">
+      <path d="M1.10269e-06 5L64 5" stroke="#3BA0B7" stroke-width="9" />
+    </svg>
+    <div class="gradient__background">
+      <h1>Eva </h1>
+    </div>
+    <h2 class="surname">Díaz Antequera</h2>
+    <p class="job-title">Desarrolladora Front end</p>
+  </div>
+    <div class="header__content__address">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24" fill="none">
+        <g clip-path="url(#clip0_1762_1661)">
+          <path
+            d="M10.1109 23.4C12.5156 20.3906 18 13.0969 18 9C18 4.03125 13.9688 0 9 0C4.03125 0 0 4.03125 0 9C0 13.0969 5.48438 20.3906 7.88906 23.4C8.46562 24.1172 9.53438 24.1172 10.1109 23.4ZM14.2969 6.79688L8.29688 12.7969C7.85625 13.2375 7.14375 13.2375 6.70781 12.7969L3.70312 9.79688C3.2625 9.35625 3.2625 8.64375 3.70312 8.20781C4.14375 7.77188 4.85625 7.76719 5.29219 8.20781L7.49531 10.4109L12.7031 5.20312C13.1438 4.7625 13.8562 4.7625 14.2922 5.20312C14.7281 5.64375 14.7328 6.35625 14.2922 6.79219L14.2969 6.79688Z"
+            fill="#3BA0B7"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_1762_1661">
+            <rect width="18" height="24" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+      <p>Málaga , España</p>
+    </div>
+
+              <div class="header__content__links">
+        <a href=https://linkedin.com/in/eva-d%C3%ADaz-antequera-00059b150 target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <g clip-path="url(#clip0_1745_1632)">
+              <path
+                d="M20.447 20.452H16.893V14.883C16.893 13.555 16.866 11.846 15.041 11.846C13.188 11.846 12.905 13.291 12.905 14.785V20.452H9.351V9H12.765V10.561H12.811C13.288 9.661 14.448 8.711 16.181 8.711C19.782 8.711 20.448 11.081 20.448 14.166V20.452H20.447ZM5.337 7.433C5.06588 7.43313 4.79739 7.37979 4.54691 7.27604C4.29642 7.17229 4.06886 7.02015 3.87724 6.82835C3.68562 6.63654 3.5337 6.40883 3.43019 6.15825C3.32668 5.90766 3.27361 5.63912 3.274 5.368C3.2742 4.95978 3.39544 4.56078 3.6224 4.22147C3.84936 3.88216 4.17184 3.61777 4.54907 3.46173C4.92629 3.30569 5.34131 3.26502 5.74165 3.34485C6.14198 3.42469 6.50966 3.62144 6.79817 3.91024C7.08669 4.19903 7.28309 4.5669 7.36254 4.96731C7.44198 5.36773 7.40091 5.78271 7.2445 6.15978C7.0881 6.53685 6.8234 6.85908 6.48387 7.08571C6.14433 7.31234 5.74522 7.4332 5.337 7.433ZM7.119 20.452H3.555V9H7.119V20.452ZM22.225 0H1.771C0.792 0 0 0.774 0 1.729V22.271C0 23.227 0.792 24 1.771 24H22.222C23.2 24 24 23.227 24 22.271V1.729C24 0.774 23.2 0 22.222 0H22.225Z"
+                fill="#3BA0B7"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_1745_1632">
+                <rect width="24" height="24" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+    <div class="header__content__links">
+        <a href=https://github.com/evadadev target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <g clip-path="url(#clip0_1745_1636)">
+              <path
+                d="M12 0.296875C5.37 0.296875 0 5.66988 0 12.2969C0 17.5999 3.438 22.0969 8.205 23.6819C8.805 23.7949 9.025 23.4239 9.025 23.1049C9.025 22.8199 9.015 22.0649 9.01 21.0649C5.672 21.7889 4.968 19.4549 4.968 19.4549C4.422 18.0699 3.633 17.6999 3.633 17.6999C2.546 16.9559 3.717 16.9709 3.717 16.9709C4.922 17.0549 5.555 18.2069 5.555 18.2069C6.625 20.0419 8.364 19.5119 9.05 19.2049C9.158 18.4289 9.467 17.8999 9.81 17.5999C7.145 17.2999 4.344 16.2679 4.344 11.6699C4.344 10.3599 4.809 9.28988 5.579 8.44988C5.444 8.14688 5.039 6.92688 5.684 5.27388C5.684 5.27388 6.689 4.95188 8.984 6.50388C9.944 6.23688 10.964 6.10488 11.984 6.09888C13.004 6.10488 14.024 6.23688 14.984 6.50388C17.264 4.95188 18.269 5.27388 18.269 5.27388C18.914 6.92688 18.509 8.14688 18.389 8.44988C19.154 9.28988 19.619 10.3599 19.619 11.6699C19.619 16.2799 16.814 17.2949 14.144 17.5899C14.564 17.9499 14.954 18.6859 14.954 19.8099C14.954 21.4159 14.939 22.7059 14.939 23.0959C14.939 23.4109 15.149 23.7859 15.764 23.6659C20.565 22.0919 24 17.5919 24 12.2969C24 5.66988 18.627 0.296875 12 0.296875Z"
+                fill="#3BA0B7"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_1745_1636">
+                <rect width="24" height="24" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+  </div>
+
+        </section>
+
+      </header>
+
+      <main>
+
+          <section class="main__section about-me__section">
+    <div class="main__section__header">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="6" viewBox="0 0 32 6" fill="none">
+        <path d="M5.51343e-07 3L32 3" stroke="#3BA0B7" stroke-width="6" />
+      </svg>
+      <h2>Sobre mí</h2>
+    </div>
+    <p>Después de toda una larga vida profesional en la que no podía calmar mis ganas de aprender y seguir creciendo, he decidido enfrentarme a nuevos retos en los que pueda aprender al máximo cosas nuevas, de la gente que me rodea y siempre dando lo mejor de mí.
+Desde 2022 me he centrado exclusivamente en estudiar este mundo del desarrollo en el que navego fascinada. Mi objetivo es aprender día a día de los mejores en proyectos reales.
+
+Aptitudes : Javascript, React, Vue, Typescript, Css, GitHub...</p>
+  </section>
+
+        
+          <section class="main__section">
+    <div class="main__section__header">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="6" viewBox="0 0 32 6" fill="none">
+        <path d="M5.51343e-07 3L32 3" stroke="#3BA0B7" stroke-width="6" />
+      </svg>
+      <h2>Habilidades</h2>
+    </div>
+    <ul class="ul__technologies">
+        <li class="li__technologies">
+          <!-- We need to know if we can get the technology images -->
+          <!-- <img class="technologie__icon--gray-scale" src=""> -->
+          CSS
+        </li>
+        <li class="li__technologies">
+          <!-- We need to know if we can get the technology images -->
+          <!-- <img class="technologie__icon--gray-scale" src=""> -->
+          Github
+        </li>
+        <li class="li__technologies">
+          <!-- We need to know if we can get the technology images -->
+          <!-- <img class="technologie__icon--gray-scale" src=""> -->
+          HTML
+        </li>
+        <li class="li__technologies">
+          <!-- We need to know if we can get the technology images -->
+          <!-- <img class="technologie__icon--gray-scale" src=""> -->
+          JavaScript
+        </li>
+        <li class="li__technologies">
+          <!-- We need to know if we can get the technology images -->
+          <!-- <img class="technologie__icon--gray-scale" src=""> -->
+          React
+        </li>
+        <li class="li__technologies">
+          <!-- We need to know if we can get the technology images -->
+          <!-- <img class="technologie__icon--gray-scale" src=""> -->
+          Tailwind
+        </li>
+        <li class="li__technologies">
+          <!-- We need to know if we can get the technology images -->
+          <!-- <img class="technologie__icon--gray-scale" src=""> -->
+          TypeScript
+        </li>
+        <li class="li__technologies">
+          <!-- We need to know if we can get the technology images -->
+          <!-- <img class="technologie__icon--gray-scale" src=""> -->
+          Vite
+        </li>
+        <li class="li__technologies">
+          <!-- We need to know if we can get the technology images -->
+          <!-- <img class="technologie__icon--gray-scale" src=""> -->
+          Vue
+        </li>
+    </ul>
+  </section>
+
+          <section class="main__section">
+    <div class="main__section__header">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="6" viewBox="0 0 32 6" fill="none">
+        <path d="M5.51343e-07 3L32 3" stroke="#3BA0B7" stroke-width="6" />
+      </svg>
+      <h2>Competencias</h2>
+    </div>
+    <ul class="main__section__skills__ul">
+        <li class="main__section__skills__li">Adaptabilidad al cambio</li>
+        <li class="main__section__skills__li">Aprendizaje Continuo</li>
+        <li class="main__section__skills__li">Capacidad de autogestión</li>
+    </ul>
+  </section>
+
+          <section class="main__section">
+    <div class="main__section__header">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="6" viewBox="0 0 32 6" fill="none">
+        <path d="M5.51343e-07 3L32 3" stroke="#3BA0B7" stroke-width="6" />
+      </svg>
+      <h2>Experiencia / Carrera</h2>
+    </div>
+      <section class="main__section__item">
+        <h3>Freelance Web Development</h3>
+        <h4>Open Source Developer</h4>
+        <div class="section__content__date">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path
+              opacity="0.75"
+              d="M4.33333 1V3M13.6667 1V3M1 15V5C1 4.46957 1.21071 3.96086 1.58579 3.58579C1.96086 3.21071 2.46957 3 3 3H15C15.5304 3 16.0391 3.21071 16.4142 3.58579C16.7893 3.96086 17 4.46957 17 5V15M1 15C1 15.5304 1.21071 16.0391 1.58579 16.4142C1.96086 16.7893 2.46957 17 3 17H15C15.5304 17 16.0391 16.7893 16.4142 16.4142C16.7893 16.0391 17 15.5304 17 15M1 15V8.33333C1 7.8029 1.21071 7.29419 1.58579 6.91912C1.96086 6.54405 2.46957 6.33333 3 6.33333H15C15.5304 6.33333 16.0391 6.54405 16.4142 6.91912C16.7893 7.29419 17 7.8029 17 8.33333V15M9 9.66667H9.00711V9.67378H9V9.66667ZM9 11.6667H9.00711V11.6738H9V11.6667ZM9 13.6667H9.00711V13.6738H9V13.6667ZM7 11.6667H7.00711V11.6738H7V11.6667ZM7 13.6667H7.00711V13.6738H7V13.6667ZM5 11.6667H5.00711V11.6738H5V11.6667ZM5 13.6667H5.00711V13.6738H5V13.6667ZM11 9.66667H11.0071V9.67378H11V9.66667ZM11 11.6667H11.0071V11.6738H11V11.6667ZM11 13.6667H11.0071V13.6738H11V13.6667ZM13 9.66667H13.0071V9.67378H13V9.66667ZM13 11.6667H13.0071V11.6738H13V11.6667Z"
+              stroke="#353241"
+              stroke-width="0.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p>abr 2024            - Actualidad
+          </p>
+        </div>
+        <div class="main__section__data">
+            <ul>
+                <li>Desarrollo de una web informativa para un hostal, adaptada a las necesidades del cliente.</li>
+            </ul>
+        </div>
+          <h3 class="tech__tools__heading">Tecnologias y Herramientas</h3>
+          <ul class="ul__technologies">
+              <li class="li__technologies">CSS</li>
+              <li class="li__technologies">HTML</li>
+              <li class="li__technologies">React</li>
+              <li class="li__technologies">Tailwind</li>
+              <li class="li__technologies">TypeScript</li>
+              <li class="li__technologies">Vite</li>
+          </ul>
+      </section>
+      <section class="main__section__item">
+        <h3>Lemoncoders</h3>
+        <h4>Open Source Developer</h4>
+        <div class="section__content__date">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path
+              opacity="0.75"
+              d="M4.33333 1V3M13.6667 1V3M1 15V5C1 4.46957 1.21071 3.96086 1.58579 3.58579C1.96086 3.21071 2.46957 3 3 3H15C15.5304 3 16.0391 3.21071 16.4142 3.58579C16.7893 3.96086 17 4.46957 17 5V15M1 15C1 15.5304 1.21071 16.0391 1.58579 16.4142C1.96086 16.7893 2.46957 17 3 17H15C15.5304 17 16.0391 16.7893 16.4142 16.4142C16.7893 16.0391 17 15.5304 17 15M1 15V8.33333C1 7.8029 1.21071 7.29419 1.58579 6.91912C1.96086 6.54405 2.46957 6.33333 3 6.33333H15C15.5304 6.33333 16.0391 6.54405 16.4142 6.91912C16.7893 7.29419 17 7.8029 17 8.33333V15M9 9.66667H9.00711V9.67378H9V9.66667ZM9 11.6667H9.00711V11.6738H9V11.6667ZM9 13.6667H9.00711V13.6738H9V13.6667ZM7 11.6667H7.00711V11.6738H7V11.6667ZM7 13.6667H7.00711V13.6738H7V13.6667ZM5 11.6667H5.00711V11.6738H5V11.6667ZM5 13.6667H5.00711V13.6738H5V13.6667ZM11 9.66667H11.0071V9.67378H11V9.66667ZM11 11.6667H11.0071V11.6738H11V11.6667ZM11 13.6667H11.0071V13.6738H11V13.6667ZM13 9.66667H13.0071V9.67378H13V9.66667ZM13 11.6667H13.0071V11.6738H13V11.6667Z"
+              stroke="#353241"
+              stroke-width="0.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p>feb 2024            - Actualidad
+          </p>
+        </div>
+        <div class="main__section__data">
+            <ul>
+                <li>Miembro del equipo de desarrollo de la herramienta Mongo Modeler, una aplicación online gratuita y open source que permite crear diagramas de bases de datos documentales, y generar transformaciones a SVG, PDF y esquemas de mongoDB.</li>
+            </ul>
+        </div>
+          <a href="https://mongomodeler.com/" target="_blank">Lemoncoders</a>
+          <h3 class="tech__tools__heading">Tecnologias y Herramientas</h3>
+          <ul class="ul__technologies">
+              <li class="li__technologies">CSS</li>
+              <li class="li__technologies">Github</li>
+              <li class="li__technologies">HTML</li>
+              <li class="li__technologies">React</li>
+              <li class="li__technologies">TypeScript</li>
+              <li class="li__technologies">Vite</li>
+              <li class="li__technologies">Vitest</li>
+          </ul>
+      </section>
+      <section class="main__section__item">
+        <h3>Carrefour España</h3>
+        <h4>Jefa de departamento</h4>
+        <div class="section__content__date">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path
+              opacity="0.75"
+              d="M4.33333 1V3M13.6667 1V3M1 15V5C1 4.46957 1.21071 3.96086 1.58579 3.58579C1.96086 3.21071 2.46957 3 3 3H15C15.5304 3 16.0391 3.21071 16.4142 3.58579C16.7893 3.96086 17 4.46957 17 5V15M1 15C1 15.5304 1.21071 16.0391 1.58579 16.4142C1.96086 16.7893 2.46957 17 3 17H15C15.5304 17 16.0391 16.7893 16.4142 16.4142C16.7893 16.0391 17 15.5304 17 15M1 15V8.33333C1 7.8029 1.21071 7.29419 1.58579 6.91912C1.96086 6.54405 2.46957 6.33333 3 6.33333H15C15.5304 6.33333 16.0391 6.54405 16.4142 6.91912C16.7893 7.29419 17 7.8029 17 8.33333V15M9 9.66667H9.00711V9.67378H9V9.66667ZM9 11.6667H9.00711V11.6738H9V11.6667ZM9 13.6667H9.00711V13.6738H9V13.6667ZM7 11.6667H7.00711V11.6738H7V11.6667ZM7 13.6667H7.00711V13.6738H7V13.6667ZM5 11.6667H5.00711V11.6738H5V11.6667ZM5 13.6667H5.00711V13.6738H5V13.6667ZM11 9.66667H11.0071V9.67378H11V9.66667ZM11 11.6667H11.0071V11.6738H11V11.6667ZM11 13.6667H11.0071V13.6738H11V13.6667ZM13 9.66667H13.0071V9.67378H13V9.66667ZM13 11.6667H13.0071V11.6738H13V11.6667Z"
+              stroke="#353241"
+              stroke-width="0.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p>jul 2002            - ene 2023          </p>
+        </div>
+        <div class="main__section__data">
+            <ul>
+                <li>Gestión administrativa en procesos comerciales.
+Incentivación comercial y marketing.
+Soportes y resolución de incidencias.
+Negociación con proveedores de departamento.
+Atención al cliente.</li>
+            </ul>
+        </div>
+      </section>
+  </section>
+
+          <section class="main__section">
+    <div class="main__section__header">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="6" viewBox="0 0 32 6" fill="none">
+        <path d="M5.51343e-07 3L32 3" stroke="#3BA0B7" stroke-width="6" />
+      </svg>
+      <h2>Estudios</h2>
+    </div>
+      <section class="main__section__item">
+        <h3>Master Front End , Desarrollador web</h3>
+          <h4>Lemoncoders</h4>
+        <div class="section__content__date">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path
+              opacity="0.75"
+              d="M4.33333 1V3M13.6667 1V3M1 15V5C1 4.46957 1.21071 3.96086 1.58579 3.58579C1.96086 3.21071 2.46957 3 3 3H15C15.5304 3 16.0391 3.21071 16.4142 3.58579C16.7893 3.96086 17 4.46957 17 5V15M1 15C1 15.5304 1.21071 16.0391 1.58579 16.4142C1.96086 16.7893 2.46957 17 3 17H15C15.5304 17 16.0391 16.7893 16.4142 16.4142C16.7893 16.0391 17 15.5304 17 15M1 15V8.33333C1 7.8029 1.21071 7.29419 1.58579 6.91912C1.96086 6.54405 2.46957 6.33333 3 6.33333H15C15.5304 6.33333 16.0391 6.54405 16.4142 6.91912C16.7893 7.29419 17 7.8029 17 8.33333V15M9 9.66667H9.00711V9.67378H9V9.66667ZM9 11.6667H9.00711V11.6738H9V11.6667ZM9 13.6667H9.00711V13.6738H9V13.6667ZM7 11.6667H7.00711V11.6738H7V11.6667ZM7 13.6667H7.00711V13.6738H7V13.6667ZM5 11.6667H5.00711V11.6738H5V11.6667ZM5 13.6667H5.00711V13.6738H5V13.6667ZM11 9.66667H11.0071V9.67378H11V9.66667ZM11 11.6667H11.0071V11.6738H11V11.6667ZM11 13.6667H11.0071V13.6738H11V13.6667ZM13 9.66667H13.0071V9.67378H13V9.66667ZM13 11.6667H13.0071V11.6738H13V11.6667Z"
+              stroke="#353241"
+              stroke-width="0.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p>
+            abr 2023            - feb 2024          </p>
+        </div>
+        <div class="main__section__data">
+          <p></p>
+        </div>
+          <h3 class="tech__tools__heading">Tecnologias y Herramientas</h3>
+          <ul class="ul__technologies">
+              <li class="li__technologies">Axios</li>
+              <li class="li__technologies">CSS</li>
+              <li class="li__technologies">Docker</li>
+              <li class="li__technologies">GraphQL</li>
+              <li class="li__technologies">HTML</li>
+              <li class="li__technologies">JavaScript</li>
+              <li class="li__technologies">Jest</li>
+              <li class="li__technologies">NextJS</li>
+              <li class="li__technologies">React</li>
+              <li class="li__technologies">RxJS</li>
+              <li class="li__technologies">SaaS</li>
+              <li class="li__technologies">Socket.io</li>
+              <li class="li__technologies">Svelte</li>
+              <li class="li__technologies">TypeScript</li>
+              <li class="li__technologies">Vite</li>
+              <li class="li__technologies">Vue</li>
+              <li class="li__technologies">Webpack</li>
+          </ul>
+      </section>
+      <section class="main__section__item">
+        <h3>Bootcamp Javascript , Frond End</h3>
+          <h4>Lemoncoders</h4>
+        <div class="section__content__date">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path
+              opacity="0.75"
+              d="M4.33333 1V3M13.6667 1V3M1 15V5C1 4.46957 1.21071 3.96086 1.58579 3.58579C1.96086 3.21071 2.46957 3 3 3H15C15.5304 3 16.0391 3.21071 16.4142 3.58579C16.7893 3.96086 17 4.46957 17 5V15M1 15C1 15.5304 1.21071 16.0391 1.58579 16.4142C1.96086 16.7893 2.46957 17 3 17H15C15.5304 17 16.0391 16.7893 16.4142 16.4142C16.7893 16.0391 17 15.5304 17 15M1 15V8.33333C1 7.8029 1.21071 7.29419 1.58579 6.91912C1.96086 6.54405 2.46957 6.33333 3 6.33333H15C15.5304 6.33333 16.0391 6.54405 16.4142 6.91912C16.7893 7.29419 17 7.8029 17 8.33333V15M9 9.66667H9.00711V9.67378H9V9.66667ZM9 11.6667H9.00711V11.6738H9V11.6667ZM9 13.6667H9.00711V13.6738H9V13.6667ZM7 11.6667H7.00711V11.6738H7V11.6667ZM7 13.6667H7.00711V13.6738H7V13.6667ZM5 11.6667H5.00711V11.6738H5V11.6667ZM5 13.6667H5.00711V13.6738H5V13.6667ZM11 9.66667H11.0071V9.67378H11V9.66667ZM11 11.6667H11.0071V11.6738H11V11.6667ZM11 13.6667H11.0071V13.6738H11V13.6667ZM13 9.66667H13.0071V9.67378H13V9.66667ZM13 11.6667H13.0071V11.6738H13V11.6667Z"
+              stroke="#353241"
+              stroke-width="0.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p>
+            oct 2022            - abr 2023          </p>
+        </div>
+        <div class="main__section__data">
+          <p></p>
+        </div>
+          <h3 class="tech__tools__heading">Tecnologias y Herramientas</h3>
+          <ul class="ul__technologies">
+              <li class="li__technologies">CSS</li>
+              <li class="li__technologies">HTML</li>
+              <li class="li__technologies">JavaScript</li>
+              <li class="li__technologies">Visual Studio Code</li>
+          </ul>
+      </section>
+      <section class="main__section__item">
+        <h3>Ciclo Formativo de Grado Medio, Farmacia</h3>
+          <h4>IES Santa Maria de los Ángeles</h4>
+        <div class="section__content__date">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path
+              opacity="0.75"
+              d="M4.33333 1V3M13.6667 1V3M1 15V5C1 4.46957 1.21071 3.96086 1.58579 3.58579C1.96086 3.21071 2.46957 3 3 3H15C15.5304 3 16.0391 3.21071 16.4142 3.58579C16.7893 3.96086 17 4.46957 17 5V15M1 15C1 15.5304 1.21071 16.0391 1.58579 16.4142C1.96086 16.7893 2.46957 17 3 17H15C15.5304 17 16.0391 16.7893 16.4142 16.4142C16.7893 16.0391 17 15.5304 17 15M1 15V8.33333C1 7.8029 1.21071 7.29419 1.58579 6.91912C1.96086 6.54405 2.46957 6.33333 3 6.33333H15C15.5304 6.33333 16.0391 6.54405 16.4142 6.91912C16.7893 7.29419 17 7.8029 17 8.33333V15M9 9.66667H9.00711V9.67378H9V9.66667ZM9 11.6667H9.00711V11.6738H9V11.6667ZM9 13.6667H9.00711V13.6738H9V13.6667ZM7 11.6667H7.00711V11.6738H7V11.6667ZM7 13.6667H7.00711V13.6738H7V13.6667ZM5 11.6667H5.00711V11.6738H5V11.6667ZM5 13.6667H5.00711V13.6738H5V13.6667ZM11 9.66667H11.0071V9.67378H11V9.66667ZM11 11.6667H11.0071V11.6738H11V11.6667ZM11 13.6667H11.0071V13.6738H11V13.6667ZM13 9.66667H13.0071V9.67378H13V9.66667ZM13 11.6667H13.0071V11.6738H13V11.6667Z"
+              stroke="#353241"
+              stroke-width="0.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p>
+            sept 2000            - jul 2002          </p>
+        </div>
+        <div class="main__section__data">
+          <p></p>
+        </div>
+      </section>
+  </section>
+
+      </main>
+
+        </div>
+  </body>
+</html>
+
+  
