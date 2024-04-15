@@ -244,6 +244,13 @@
         gap: var(--spacing_64);
       }
 
+      .capture__app {
+        min-width: 225px;
+        min-height: 225px;
+        max-width: 350px;
+        max-height: 350px;
+      }
+
       .main__section {
         display: flex;
         flex-direction: column;
@@ -402,7 +409,7 @@
 
       <header>
 
-          <img src="https://media-asgard.s3.eu-west-1.amazonaws.com/24/04/10/4fc10964-6e2d-4a3f-a965-e3eb3ca6a183_linkedin-photo-60170.linkedin-photo-60170" />
+          <img src="https://media-asgard.s3.eu-west-1.amazonaws.com/24/04/15/28151882-134a-48e1-877e-b159aebcfaa3_linkedin-photo-60170.linkedin-photo-60170" />
 
         <section class="header__content">
 
@@ -433,6 +440,10 @@
         </defs>
       </svg>
       <p>Málaga , España</p>
+    </div>
+    <div class="header__content__address">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 256 256"><path fill="#499EB7" d="M231.88 175.08A56.26 56.26 0 0 1 176 224C96.6 224 32 159.4 32 80a56.26 56.26 0 0 1 48.92-55.88a16 16 0 0 1 16.62 9.52l21.12 47.15v.12A16 16 0 0 1 117.39 96c-.18.27-.37.52-.57.77L96 121.45c7.49 15.22 23.41 31 38.83 38.51l24.34-20.71a8.12 8.12 0 0 1 .75-.56a16 16 0 0 1 15.17-1.4l.13.06l47.11 21.11a16 16 0 0 1 9.55 16.62"></path></svg>
+      <p>663994067</p>
     </div>
 
               <div class="header__content__links">
@@ -482,10 +493,7 @@
       </svg>
       <h2>Sobre mí</h2>
     </div>
-    <p>Después de toda una larga vida profesional en la que no podía calmar mis ganas de aprender y seguir creciendo, he decidido enfrentarme a nuevos retos en los que pueda aprender al máximo cosas nuevas, de la gente que me rodea y siempre dando lo mejor de mí.
-Desde 2022 me he centrado exclusivamente en estudiar este mundo del desarrollo en el que navego fascinada. Mi objetivo es aprender día a día de los mejores en proyectos reales.
-
-Aptitudes : Javascript, React, Vue, Typescript, Css, GitHub...</p>
+    <p>Soy una desarrolladora Front End con experiencia en el desarrollo de herramientas y aplicaciones web. En mi rol dentro del equipo de Mongo Modeler, he utilizado tecnologías como React, Typescript, Vite y Vitest para diseñar una plataforma online que permite crear diagramas de bases de datos no documentales. Además, he liderado el desarrollo completo de un sitio web para un hostal, empleando Next. js y Tailwind CSS. Mi formación técnica proviene de un Bootcamp de Javascript, y he profundizado mis conocimientos cursando un Máster en Front End en Lemoncode. Actualmente, estoy expandiendo mi capacidad técnica mediante un Bootcamp de Back End, con el objetivo de desarrollar habilidades en Full Stack y ampliar mi campo de actuación en futuros proyectos.</p>
   </section>
 
         
@@ -516,6 +524,11 @@ Aptitudes : Javascript, React, Vue, Typescript, Css, GitHub...</p>
           <!-- We need to know if we can get the technology images -->
           <!-- <img class="technologie__icon--gray-scale" src=""> -->
           JavaScript
+        </li>
+        <li class="li__technologies">
+          <!-- We need to know if we can get the technology images -->
+          <!-- <img class="technologie__icon--gray-scale" src=""> -->
+          NextJS
         </li>
         <li class="li__technologies">
           <!-- We need to know if we can get the technology images -->
@@ -567,8 +580,8 @@ Aptitudes : Javascript, React, Vue, Typescript, Css, GitHub...</p>
       <h2>Experiencia / Carrera</h2>
     </div>
       <section class="main__section__item">
-        <h3>Freelance Web Development</h3>
-        <h4>Open Source Developer</h4>
+        <h3>Hostal Ana Nerja</h3>
+        <h4>Web Developer</h4>
         <div class="section__content__date">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
             <path
@@ -585,21 +598,14 @@ Aptitudes : Javascript, React, Vue, Typescript, Css, GitHub...</p>
         </div>
         <div class="main__section__data">
             <ul>
-                <li>Desarrollo de una web informativa para un hostal, adaptada a las necesidades del cliente.</li>
+                <li>Skills: React.js · Tailwind CSS · HTML5 · JavaScript · vite · i18n · Nextjs</li>
             </ul>
         </div>
-          <h3 class="tech__tools__heading">Tecnologias y Herramientas</h3>
-          <ul class="ul__technologies">
-              <li class="li__technologies">CSS</li>
-              <li class="li__technologies">HTML</li>
-              <li class="li__technologies">React</li>
-              <li class="li__technologies">Tailwind</li>
-              <li class="li__technologies">TypeScript</li>
-              <li class="li__technologies">Vite</li>
-          </ul>
+        <img src="./assets/hostalAna.png" alt="hostalAna" class="capture__app">
+        
       </section>
       <section class="main__section__item">
-        <h3>Lemoncoders</h3>
+        <h3>Mongomodeler</h3>
         <h4>Open Source Developer</h4>
         <div class="section__content__date">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -620,17 +626,29 @@ Aptitudes : Javascript, React, Vue, Typescript, Css, GitHub...</p>
                 <li>Miembro del equipo de desarrollo de la herramienta Mongo Modeler, una aplicación online gratuita y open source que permite crear diagramas de bases de datos documentales, y generar transformaciones a SVG, PDF y esquemas de mongoDB.</li>
             </ul>
         </div>
-          <a href="https://mongomodeler.com/" target="_blank">Lemoncoders</a>
-          <h3 class="tech__tools__heading">Tecnologias y Herramientas</h3>
-          <ul class="ul__technologies">
-              <li class="li__technologies">CSS</li>
-              <li class="li__technologies">Github</li>
-              <li class="li__technologies">HTML</li>
-              <li class="li__technologies">React</li>
-              <li class="li__technologies">TypeScript</li>
-              <li class="li__technologies">Vite</li>
-              <li class="li__technologies">Vitest</li>
-          </ul>
+        <img src="./assets/mongoModeler.png" alt="mongoModeler" class="capture__app">
+      </section>
+      <section class="main__section__item">
+        <h3>Lemoncoders</h3>
+        <h4>Estudiante Front end Lemoncode</h4>
+        <div class="section__content__date">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path
+              opacity="0.75"
+              d="M4.33333 1V3M13.6667 1V3M1 15V5C1 4.46957 1.21071 3.96086 1.58579 3.58579C1.96086 3.21071 2.46957 3 3 3H15C15.5304 3 16.0391 3.21071 16.4142 3.58579C16.7893 3.96086 17 4.46957 17 5V15M1 15C1 15.5304 1.21071 16.0391 1.58579 16.4142C1.96086 16.7893 2.46957 17 3 17H15C15.5304 17 16.0391 16.7893 16.4142 16.4142C16.7893 16.0391 17 15.5304 17 15M1 15V8.33333C1 7.8029 1.21071 7.29419 1.58579 6.91912C1.96086 6.54405 2.46957 6.33333 3 6.33333H15C15.5304 6.33333 16.0391 6.54405 16.4142 6.91912C16.7893 7.29419 17 7.8029 17 8.33333V15M9 9.66667H9.00711V9.67378H9V9.66667ZM9 11.6667H9.00711V11.6738H9V11.6667ZM9 13.6667H9.00711V13.6738H9V13.6667ZM7 11.6667H7.00711V11.6738H7V11.6667ZM7 13.6667H7.00711V13.6738H7V13.6667ZM5 11.6667H5.00711V11.6738H5V11.6667ZM5 13.6667H5.00711V13.6738H5V13.6667ZM11 9.66667H11.0071V9.67378H11V9.66667ZM11 11.6667H11.0071V11.6738H11V11.6667ZM11 13.6667H11.0071V13.6738H11V13.6667ZM13 9.66667H13.0071V9.67378H13V9.66667ZM13 11.6667H13.0071V11.6738H13V11.6667Z"
+              stroke="#353241"
+              stroke-width="0.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p>abr 2023            - feb 2024          </p>
+        </div>
+        <div class="main__section__data">
+            <ul>
+                <li>Skills: HTML5 · Hojas de estilos en cascada (CSS) · JavaScript · React.js · TypeScript · Vue.js · Tailwind CSS · GitHub</li>
+            </ul>
+        </div>
       </section>
       <section class="main__section__item">
         <h3>Carrefour España</h3>
@@ -658,6 +676,56 @@ Atención al cliente.</li>
             </ul>
         </div>
       </section>
+      <section class="main__section__item">
+        <h3>Farmacia Lda. Ana Mª Moreno</h3>
+        <h4>Técnico de farmacia</h4>
+        <div class="section__content__date">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path
+              opacity="0.75"
+              d="M4.33333 1V3M13.6667 1V3M1 15V5C1 4.46957 1.21071 3.96086 1.58579 3.58579C1.96086 3.21071 2.46957 3 3 3H15C15.5304 3 16.0391 3.21071 16.4142 3.58579C16.7893 3.96086 17 4.46957 17 5V15M1 15C1 15.5304 1.21071 16.0391 1.58579 16.4142C1.96086 16.7893 2.46957 17 3 17H15C15.5304 17 16.0391 16.7893 16.4142 16.4142C16.7893 16.0391 17 15.5304 17 15M1 15V8.33333C1 7.8029 1.21071 7.29419 1.58579 6.91912C1.96086 6.54405 2.46957 6.33333 3 6.33333H15C15.5304 6.33333 16.0391 6.54405 16.4142 6.91912C16.7893 7.29419 17 7.8029 17 8.33333V15M9 9.66667H9.00711V9.67378H9V9.66667ZM9 11.6667H9.00711V11.6738H9V11.6667ZM9 13.6667H9.00711V13.6738H9V13.6667ZM7 11.6667H7.00711V11.6738H7V11.6667ZM7 13.6667H7.00711V13.6738H7V13.6667ZM5 11.6667H5.00711V11.6738H5V11.6667ZM5 13.6667H5.00711V13.6738H5V13.6667ZM11 9.66667H11.0071V9.67378H11V9.66667ZM11 11.6667H11.0071V11.6738H11V11.6667ZM11 13.6667H11.0071V13.6738H11V13.6667ZM13 9.66667H13.0071V9.67378H13V9.66667ZM13 11.6667H13.0071V11.6738H13V11.6667Z"
+              stroke="#353241"
+              stroke-width="0.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p>dic 2001            - jun 2002          </p>
+        </div>
+        <div class="main__section__data">
+            <ul>
+                <li>Atención al usuario.
+Colaboración en la distribución y venta de medicamentos y productos farmacéuticos.
+Asistir y ayudar al farmacéutico en la provisión de servicios de su competencia.
+Control y resposición de almacén.</li>
+            </ul>
+        </div>
+      </section>
+      <section class="main__section__item">
+        <h3>Hospital parque San Antonio</h3>
+        <h4>Técnico de farmacia</h4>
+        <div class="section__content__date">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path
+              opacity="0.75"
+              d="M4.33333 1V3M13.6667 1V3M1 15V5C1 4.46957 1.21071 3.96086 1.58579 3.58579C1.96086 3.21071 2.46957 3 3 3H15C15.5304 3 16.0391 3.21071 16.4142 3.58579C16.7893 3.96086 17 4.46957 17 5V15M1 15C1 15.5304 1.21071 16.0391 1.58579 16.4142C1.96086 16.7893 2.46957 17 3 17H15C15.5304 17 16.0391 16.7893 16.4142 16.4142C16.7893 16.0391 17 15.5304 17 15M1 15V8.33333C1 7.8029 1.21071 7.29419 1.58579 6.91912C1.96086 6.54405 2.46957 6.33333 3 6.33333H15C15.5304 6.33333 16.0391 6.54405 16.4142 6.91912C16.7893 7.29419 17 7.8029 17 8.33333V15M9 9.66667H9.00711V9.67378H9V9.66667ZM9 11.6667H9.00711V11.6738H9V11.6667ZM9 13.6667H9.00711V13.6738H9V13.6667ZM7 11.6667H7.00711V11.6738H7V11.6667ZM7 13.6667H7.00711V13.6738H7V13.6667ZM5 11.6667H5.00711V11.6738H5V11.6667ZM5 13.6667H5.00711V13.6738H5V13.6667ZM11 9.66667H11.0071V9.67378H11V9.66667ZM11 11.6667H11.0071V11.6738H11V11.6667ZM11 13.6667H11.0071V13.6738H11V13.6667ZM13 9.66667H13.0071V9.67378H13V9.66667ZM13 11.6667H13.0071V11.6738H13V11.6667Z"
+              stroke="#353241"
+              stroke-width="0.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p>jun 2001            - dic 2001          </p>
+        </div>
+        <div class="main__section__data">
+            <ul>
+                <li>Registro y control de medicamentos dispensados.
+Gestión administrativa del servicio de farmacia.
+Supervisión y mantenimiento de equipos y aparatos.
+Colaboración en todas aquellas actividades que le son encomendadas por el farmacéutico responsable.</li>
+            </ul>
+        </div>
+      </section>
   </section>
 
           <section class="main__section">
@@ -667,6 +735,28 @@ Atención al cliente.</li>
       </svg>
       <h2>Estudios</h2>
     </div>
+      <section class="main__section__item">
+        <h3>Bootcamp , Back Nodejs</h3>
+          <h4>Lemoncoders</h4>
+        <div class="section__content__date">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path
+              opacity="0.75"
+              d="M4.33333 1V3M13.6667 1V3M1 15V5C1 4.46957 1.21071 3.96086 1.58579 3.58579C1.96086 3.21071 2.46957 3 3 3H15C15.5304 3 16.0391 3.21071 16.4142 3.58579C16.7893 3.96086 17 4.46957 17 5V15M1 15C1 15.5304 1.21071 16.0391 1.58579 16.4142C1.96086 16.7893 2.46957 17 3 17H15C15.5304 17 16.0391 16.7893 16.4142 16.4142C16.7893 16.0391 17 15.5304 17 15M1 15V8.33333C1 7.8029 1.21071 7.29419 1.58579 6.91912C1.96086 6.54405 2.46957 6.33333 3 6.33333H15C15.5304 6.33333 16.0391 6.54405 16.4142 6.91912C16.7893 7.29419 17 7.8029 17 8.33333V15M9 9.66667H9.00711V9.67378H9V9.66667ZM9 11.6667H9.00711V11.6738H9V11.6667ZM9 13.6667H9.00711V13.6738H9V13.6667ZM7 11.6667H7.00711V11.6738H7V11.6667ZM7 13.6667H7.00711V13.6738H7V13.6667ZM5 11.6667H5.00711V11.6738H5V11.6667ZM5 13.6667H5.00711V13.6738H5V13.6667ZM11 9.66667H11.0071V9.67378H11V9.66667ZM11 11.6667H11.0071V11.6738H11V11.6667ZM11 13.6667H11.0071V13.6738H11V13.6667ZM13 9.66667H13.0071V9.67378H13V9.66667ZM13 11.6667H13.0071V11.6738H13V11.6667Z"
+              stroke="#353241"
+              stroke-width="0.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p>
+            abr 2024            - Actualidad
+          </p>
+        </div>
+        <div class="main__section__data">
+          <p></p>
+        </div>
+      </section>
       <section class="main__section__item">
         <h3>Master Front End , Desarrollador web</h3>
           <h4>Lemoncoders</h4>
@@ -687,26 +777,6 @@ Atención al cliente.</li>
         <div class="main__section__data">
           <p></p>
         </div>
-          <h3 class="tech__tools__heading">Tecnologias y Herramientas</h3>
-          <ul class="ul__technologies">
-              <li class="li__technologies">Axios</li>
-              <li class="li__technologies">CSS</li>
-              <li class="li__technologies">Docker</li>
-              <li class="li__technologies">GraphQL</li>
-              <li class="li__technologies">HTML</li>
-              <li class="li__technologies">JavaScript</li>
-              <li class="li__technologies">Jest</li>
-              <li class="li__technologies">NextJS</li>
-              <li class="li__technologies">React</li>
-              <li class="li__technologies">RxJS</li>
-              <li class="li__technologies">SaaS</li>
-              <li class="li__technologies">Socket.io</li>
-              <li class="li__technologies">Svelte</li>
-              <li class="li__technologies">TypeScript</li>
-              <li class="li__technologies">Vite</li>
-              <li class="li__technologies">Vue</li>
-              <li class="li__technologies">Webpack</li>
-          </ul>
       </section>
       <section class="main__section__item">
         <h3>Bootcamp Javascript , Frond End</h3>
@@ -728,13 +798,6 @@ Atención al cliente.</li>
         <div class="main__section__data">
           <p></p>
         </div>
-          <h3 class="tech__tools__heading">Tecnologias y Herramientas</h3>
-          <ul class="ul__technologies">
-              <li class="li__technologies">CSS</li>
-              <li class="li__technologies">HTML</li>
-              <li class="li__technologies">JavaScript</li>
-              <li class="li__technologies">Visual Studio Code</li>
-          </ul>
       </section>
       <section class="main__section__item">
         <h3>Ciclo Formativo de Grado Medio, Farmacia</h3>
